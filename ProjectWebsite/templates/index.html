@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Stylesheets/reset.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Stylesheets/main.css') }}" />
+    </head>
+    <body>
+        <header>
+            <h1 id="main_title"> Url Classifier </h1>
+        </header>
+        <section>
+            <h2 id="categories"> Types of Urls</h2>
+            <dl>
+                <dt>Phishing:</dt>
+                <dd> Points to a website that mimics legitimate websites or services, tricking 
+                    users into thinking they are interacting with a trusted entity.</dd>
+                <dt>Malware:</dt>
+                <dd> Associated with websites or web pages that host or 
+                    distribute malicious software, commonly known as malware.</dd>
+                <dt>Defacement:</dt>
+                <dd> Involves altering the appearance or content of a website 
+                      without the owner's permission, often with the intention of
+                      making a political, social, or personal statement.</dd>
+                <dt>Benign:</dt>
+                <dd> Points to legitimate websites that are safe and free from
+                    security risks.
+                </dd>
+            </dl>
+        </section>
+        <main>
+            <form method="POST">
+                <label for="url"> Enter Url Below: </label>
+                <input type="text" name="url" id="url" placeholder="http://abcdef123456">
+                <button type="submit" id="submit"> Submit </button>
+                
+            </form>
+            {% if result %}
+            <h3> Result: {{ result }} url </h3>
+            
+            {% endif %}
+        </main>
+    </body>
+</html>
