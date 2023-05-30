@@ -6,6 +6,7 @@ import math
 import tldextract, re
 from collections import Counter
 import sklearn, joblib
+from alexa_parsing import whitelist
 
 
 
@@ -120,8 +121,12 @@ def preProcess(url):
 def runModel(url):
     
     features = preProcess(url)
+    hostname = features["hostname"].iloc[0]
+    
+    if hostname in whitelist:
+        return "benign"
+    
     features = features.drop(columns=['domain', 'tld', 'hostname'])
-    print(features.head)
 
     rf_classifier = joblib.load("Completed_model.joblib")
     prediction = rf_classifier.predict(features)
