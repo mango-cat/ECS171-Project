@@ -128,7 +128,7 @@ def runModel(url):
     
     features = features.drop(columns=['domain', 'tld', 'hostname'])
 
-    rf_classifier = joblib.load("Completed_model.joblib")
+    rf_classifier = joblib.load("Completed_model2.joblib")
     prediction = rf_classifier.predict(features)
     
     return prediction[0]
