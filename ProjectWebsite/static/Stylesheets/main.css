@@ -1,6 +1,7 @@
 body{
     margin: 3em 5em;
     font-family: Helvetica, sans-serif;
+    background-color: #333333;
 }
 
 header{
@@ -12,19 +13,21 @@ h1{
     font-size: 2rem;
     margin-bottom: 1em;
     font-weight: 600;
-    color:crimson
+    color: #FF0000
 }
 
 h2{
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
+    color: #FFA500;
 }
 
 dt{
     font-weight: 300;
     font-size: 1.25rem;
     margin-bottom: 0.25em;
+    color: #F7F7F7;
 }
 
 dl{
@@ -32,6 +35,7 @@ dl{
     padding-left: 2em;
     font-size: 1rem;
     font-weight: 100;
+    color: #F7F7F7;
 }
 dd{
     padding-left: 3em;
@@ -50,36 +54,39 @@ form{
 }
 
 label{
-    padding-right: 15em;
+    padding-right: 22em;
     font-size: 1.1rem;
     font-weight: 300;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #F7F7F7;
 }
 
 input[type="text"] {
     box-sizing: border-box;
-    border: 2px solid rgba(105, 151, 208, 0.834);
+    border: 3px solid rgba(135,206,235, 1);
     padding-left: 18px;
     border-radius: 20px;
-    height: 50px;
+    height: 60px;
     margin-bottom: 3em;
-    width: 400px;
+    width: 500px;
 }
 
 button{
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
     background-color: rgba(33, 238, 29, 0.676);
-    color: white;
+    color: #F7F7F7;
     border-radius: 15px;
-    width: 175px;
+    width: 190px;
     height: 45px;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
     margin-bottom: 3em;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 300;
     text-align: center;
+    color: yellow;
 }
