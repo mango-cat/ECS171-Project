@@ -123,8 +123,6 @@ def runModel(url):
     features = preProcess(url)
     
     hostname = features["hostname"].iloc[0]
-    
-    print(hostname)
 
     if hostname in whitelist:
         return "benign"
