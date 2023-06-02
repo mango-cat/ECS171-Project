@@ -121,15 +121,18 @@ def preProcess(url):
 def runModel(url):
     
     features = preProcess(url)
+    
     hostname = features["hostname"].iloc[0]
     
+    print(hostname)
+
     if hostname in whitelist:
         return "benign"
     
+    
     features = features.drop(columns=['domain', 'tld', 'hostname'])
-
-    rf_classifier = joblib.load("Completed_model2.joblib")
-    prediction = rf_classifier.predict(features)
+    dt_classifier = joblib.load("models/model.joblib")
+    prediction = dt_classifier.predict(features)
     
     return prediction[0]
 
