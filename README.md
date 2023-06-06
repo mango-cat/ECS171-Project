@@ -1,9 +1,9 @@
 ## Running the Webpage
 Our website is a Flask application, and it can be run by typing:
 
-'''terminal
+```terminal
 akhilarunachalam@Akhils-MacBook-Air-6 Project_FrontEnd % python3 app.py
-'''
+```
 
 Then you can paste the url provided by Flask as output into a web browser such 
 as Chrome. All you have to do is type a url into the textbox, and click the 
