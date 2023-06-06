@@ -1,4 +1,5 @@
 ## Running the Webpage
+All the source code for our webpage can be found in the ProjectWebsite folder.
 Our website is a Flask application, and it can be run by typing:
 
 ```terminal
